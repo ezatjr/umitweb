@@ -8,23 +8,23 @@ body {
 
 header {
     padding: 20px;
-    background: #f4f4f4;
-    border-bottom: 1px solid #ddd;
+    background: white;
+    border-bottom: none;
     text-align: center;
 }
 
 .top-bar {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px;
 }
 
 .top-bar input[type="text"] {
+    margin-bottom: 10px;
     padding: 5px;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 10px;
 }
 
 nav ul {
@@ -33,7 +33,7 @@ nav ul {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
 }
 
@@ -42,6 +42,77 @@ nav ul li a {
     color: #333;
 }
 
+h1 {
+    margin: 0;
+    font-size: 30px;
+    text-align: left;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;;
+}
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+    gap: 20px;
+
+}
+
+.icons i {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.checkout-pris {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.icons i:hover {
+    color: #555;
+}
+
+
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.search-bar i {
+    margin-left: 4px; /* Mellomrom mellom søkefeltet og ikonet */
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px; /* Innvendig avstand for firkanten */
+    border: 1px solid #ddd; /* Firkant rundt ikonet */
+    border-radius: 4px; /* Avrunde hjørnene på firkanten */
+    background-color: white; /* Lys bakgrunn for ikonet */
+    margin-top: -12px;
+}
+
+.search-bar i:hover {
+    color: #555;
+    background-color: #e6e6e6; /* Endre bakgrunnsfarge ved hover */
+}
+
+
 main {
     padding: 20px;
     max-width: 100%;
@@ -49,7 +120,7 @@ main {
 }
 
 h2 {
-    border-bottom: 2px solid #ddd;
+    border-bottom: none;
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
@@ -59,9 +130,9 @@ h2 {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: none;
     padding: 10px;
-    background: #f9f9f9;
+    background: white;
 }
 
 .shopping-bag .product img {
@@ -78,7 +149,7 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
 }
 
 form label {
@@ -87,9 +158,9 @@ form label {
 
 form input[type="text"],
 form input[type="number"] {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 14px;
+    border: 2px solid rgba(92, 57, 57, 0.247);
+    border-radius: 0px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -101,29 +172,188 @@ form button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 69px;
+    height: 50px;
 }
+
+.fullfør-kjøp {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+}
+
 
 form button:hover {
     background: #555;
 }
 
+.avbryt-knapp {
+    background-color: white; /* Lys grå bakgrunn */
+    color: blue; /* Mørk tekstfarge */
+    text-decoration: underline;
+    font-size: 20px;
+    padding: 10px 15px; /* Innvendig avstand */
+    border-radius: 4px; /* Avrunde hjørnene */
+    cursor: pointer; /* Muspeker ved hover */
+    margin-left: -10px;
+}
+
+.avbryt-knapp:hover {
+    background-color: #e0e0e0; /* Mørkere grå ved hover */
+    border-color: #999; /* Mørkere kantlinje ved hover */
+    color: #000; /* Svart tekst ved hover */
+    
+}
+
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 35px; /* Lager plass til kalender-ikonet */
+    border: none;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.input-wrapper i {
+    position: absolute;
+    right: 10px; /* Plasseres helt til høyre */
+    top: 50%; /* Sentraliseres vertikalt */
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #aaa;
+    cursor: pointer; /* Indikerer at ikonet er interaktivt */
+}
+
+.input-wrapper input::placeholder {
+    color: #aaa;
+}
+
+
+
 /* Delivery section */
 .delivery form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
 }
 
 .delivery input[type="radio"] {
     margin-right: 10px;
 }
 
+hr {
+    border: none;
+    border-top: 1px solid #1c1717; /* Tynn strek */
+    margin: 20px 0; /* Juster avstand */
+    width: 100%; /* Full bredde */
+}
+
 /* Footer */
 footer {
-    background: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #ddd;
+    background:white;
+    padding: 40px;
+    text-align: left;
+
+}
+.footer-content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.footer-content p {
+    display: flex;
+    align-items: center; /* Sentraliser ikonet og teksten vertikalt */
+    gap: 10px; /* Avstand mellom ikonet og teksten */
+    margin: 5px 0; /* Avstand mellom paragrafene */
+}
+
+.footer-content i {
+    font-size: 16px; /* Størrelse på ikonet */
+    color: #555; /* Farge på ikonet */
+}
+
+.footer-shortcuts {
+    margin-top: 20px; /* Avstand fra tidligere innhold */
+}
+
+.footer-shortcuts h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-shortcuts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-shortcuts ul li {
+    margin-bottom: 8px;
+}
+
+.footer-shortcuts ul li a {
+    text-decoration: none;
+    color: black; /* Farge på lenkene */
+    font-size: 14px;
+}
+
+.footer-shortcuts ul li a:hover {
+    text-decoration: underline; /* Understrek ved hover */
+}
+
+.footer-social {
+    margin-top: 20px; /* Avstand fra tidligere innhold */
+}
+
+.footer-social h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social ul li {
+    display: flex;
+    align-items: center; /* Sentraliser ikonet og teksten vertikalt */
+    margin-bottom: 8px;
+}
+
+.footer-social ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-social ul li a i {
+    font-size: 20px;
+    color: black; /* Blå ikonfarge */
+    margin-right: 10px; /* Avstand mellom ikon og tekst */
+}
+
+.footer-social ul li a:hover i {
+    color: #0056b3; /* Mørkere blå ved hover */
 }
 
 /* Responsive Styles for Mobile First */
